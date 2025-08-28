@@ -1,0 +1,18 @@
+[
+    {
+      "id": "doc-001",
+      "title": "Employee Onboarding Guide",
+      "text": "Welcome to AcmeCorp. To get started: 1) create an account 2) request access to Slack channel #welcome 3) complete security training. For VPN access contact IT@acmecorp.com."
+    },
+    {
+      "id": "doc-002",
+      "title": "Expense Reimbursement Policy",
+      "text": "Submit expenses monthly via the Finance portal. Receipts over $50 require manager approval. Reimbursements processed on the 15th of each month."
+    },
+    {
+      "id": "doc-003",
+      "title": "VPN Troubleshooting",
+      "text": "If VPN fails, confirm your MFA device, restart machine, and re-install VPN client v2.1. If that fails, open a ticket with IT using the 'VPN' label."
+    }
+  ]
+  
