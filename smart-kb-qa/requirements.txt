@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+openai
+pinecone-client
+python-dotenv
+slack-sdk
+requests
+jinja2
+sqlite3  # note: sqlite3 is part of stdlib; included for clarity

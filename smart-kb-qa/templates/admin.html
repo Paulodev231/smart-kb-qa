@@ -1,0 +1,39 @@
+<!-- templates/admin.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Smart KB QA - Audit Logs</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { padding: 8px; border: 1px solid #ddd; }
+    th { background: #f4f4f4; }
+    pre { white-space: pre-wrap; word-wrap: break-word; }
+  </style>
+</head>
+<body>
+  <h2>Smart KB QA - Recent Logs</h2>
+  <table>
+    <thead>
+      <tr><th>ID</th><th>User</th><th>Query</th><th>Answer</th><th>Sources</th><th>Created At (UTC)</th></tr>
+    </thead>
+    <tbody>
+      {% for l in logs %}
+      <tr>
+        <td>{{ l.id }}</td>
+        <td>{{ l.user_id }}</td>
+        <td><pre>{{ l.command_text }}</pre></td>
+        <td><pre>{{ l.response_text }}</pre></td>
+        <td>
+          {% for s in l.sources %}
+            <strong>{{ s.id }}</strong>: {{ s.title }}<br/>
+          {% endfor %}
+        </td>
+        <td>{{ l.created_at }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
